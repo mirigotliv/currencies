@@ -1,0 +1,395 @@
+/* main css to site: */
+* {
+  box-sizing: border-box;
+}
+
+/* design to body of site: */
+body{
+  height: 100%;
+}
+
+/* background-image on site with coins: */
+.backgroundImageOfCoins {
+  background-image: url("assets/images/backgroundImage.jpg");
+  width: 100%;
+  background-attachment: fixed;
+  position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* title of site -"Cryptonite": */
+h1 {
+  font-size: 55px;
+  margin: auto;
+  color: blue;
+}
+
+/* nav of h1: */
+.navbar-text {
+  background-color: rgb(211, 211, 211);
+  border-bottom: 3px solid blue;
+  height: 125px;
+  margin: 0;
+  padding: 25px;
+  padding-left: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+/* 2 buttons of navigate in site("currencies" and "about": */
+.divHeader {
+  font-size: 17px;
+  font-weight: bold;
+  display: inline;
+  margin-left: 20px;
+  color: white;
+}
+
+/* input search+ button("search") for searching currency: */
+.searchCoin {
+  display: inline;
+  margin-left: 36px;
+  color: #2196F3;
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* input of search coin+ button of search coin: */
+.inputSearchCoin, .buttonSearchCoin {
+  border: 3px solid blue;
+  margin-top: 20px;
+  margin-left: 10px
+}
+
+/* Create a space between input of search coin and button of search coin:  */
+.buttonSearchCoin {
+  margin-left: 4px;
+}
+
+/* rows of cards: */
+.row {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* design to "spiner"- (progress bar): */
+#loadingBar {
+  display: none;
+  width: 90px;
+  height: 80px;
+  margin-left: 30%;
+}
+
+/* design all cards in site */
+.card {
+  background-color: rgb(192, 237, 255);
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* symbol of currency: */
+.symbol {
+  padding-left: 7px;
+  padding-top: 6px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: blue;
+  font-weight: bold;
+}
+
+/* design of coin's name: */
+.currencyName {
+  text-align: left;
+  padding-left: 10px;
+  margin-top: 11px;
+  float: left;
+  color: blue;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ------------------------------------ */
+/* The switch - the box around the slider: */
+.switch {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 34px;
+  right: 7px;
+  top: 6px;
+}
+
+/* hide default HTML checkbox: */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider of switch: */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* design of slider: */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*  the "ball" into the switch: */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/* design of slider: */
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/* design of slider: */
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders: */
+.slider.round {
+  border-radius: 34px;
+}
+
+/* continue to Rounded sliders: */
+.slider.round:before {
+  border-radius: 50%;
+}
+/* ------------------------------------ */
+
+/* main div of "More Info" button: */
+#moreInfoContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* button of "More Info": */
+.btn_card_more_info {
+  font-size: 16px;
+ margin-right: 90px;
+}
+
+/* main div of small modal when you click on "More Info" button: */
+#textFieldContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* design to collapser of button "More Info": */
+.textField {
+  padding-inline-start: 7px;
+  display: none;
+  overflow-y: auto;
+  flex-direction: column;
+  margin-block-start: 14px;
+  background-color: white;
+  border: 1px solid black;
+  height: 230px;
+  width: 240px;
+}
+
+/* image of each currency when you click on "More Info" card: */
+.img {
+  position: relative;
+  bottom: 68px;
+  left: 150px;
+  height: 50px;
+  width: 30px;
+}
+
+/* design to 3 prices of currencies- in euro in dollar and in shekel: */
+.currency {
+  font-size: 18px;
+}
+
+/* main modal that open when the user choosed
+more than 5 currencies:  */
+.modalContainer {
+  display: flex;
+  height : 700px;
+}
+
+
+/* modal - div that open when the user choosed
+ more than 5 currencies: */
+.modal {
+  display: none;
+  background-color: white;
+  border: 1px solid black;
+  height: 500px;
+  margin: auto;
+  position: absolute;
+  width: 500px;
+}
+
+/* button - Icon for closing the model: */
+#crossIcon {
+  position: absolute;
+  right: 0px;
+  margin-right: 14px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/* notice to user that he can't select
+ more than 5 coins */
+.NoticeUser {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-left: 10px;
+  color: blue;
+  font-weight: bold;
+}
+
+/* Question to the user within the modal: */
+.modalQuestion {
+  font-size: 17px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+/* "cancel" button whithin the modal: */
+#cancelButton {
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+/* "delete"- 5 buttons the user can
+ delete them from the modal: */
+#delete1 {
+  padding: 3px;
+  margin-top: 10px;
+}
+
+/* button for deleting a coin by the user
+ (within the model): */
+.currencyToDelete {
+  padding-left: 40px;
+  margin-top: 60px;
+}
+
+
+#notFound {
+  display: none;
+  margin-top: 24px;
+  margin-right: 33px;
+}
+
+
+#notFoundContainer {
+  align-items: center;
+  color: rgb(245, 222, 179);
+  display: flex;
+  font-size: 27px;
+  justify-content: center;
+}
+
+/* main div of data in "about" page: */
+#aboutPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* div of data in "about" page: */
+#aboutTextField {
+  padding-inline-start: 7px;
+  display: none;
+  flex-direction: column;
+  margin-block-start: 14px;
+  background-color: white;
+  border: 1px solid black;
+  height: 800px;
+  margin-left: 16px;
+  margin-top: 40px;
+  width: 90%;
+}
+
+
+#hello {
+  margin-top: 13px;
+  margin-left: 10%;
+  font-size: xx-large;
+  color: blue;
+  font-weight: bold;
+}
+
+/* details about me in "about" page: */
+.detailsAbout {
+  padding-left: 12%;
+  font-size: large;
+  color: rgb(0, 89, 255);
+  font-weight: bold;
+
+}
+
+/* description of this app in "about" page: */
+.projectDescription {
+  padding-left: 13%;
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(0, 183, 255);
+}
+
+/* my picture in "about" page: */
+#myPicture{
+  height: 200px;
+  width: 180px;
+  margin-left: 20%;
+}
+
+/* search button: */
+#searchButton {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+
+
+/* ... */
+/* .cardInfo {
+  text-align: left;
+  height: 52px;
+} */
+
+/* design to image in "More Info" onclick: */
+/* .imageMoreInfoData {
+  
+} */

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="assets/images/favicon.ico">
+    <title>Document</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!--  picture to site with background fixed of coins:  -->
+
+<body class="backgroundImageOfCoins">
+    <div>
+
+        <!-- display a title- "Cryptonite" for the site: -->
+        <div class="navbar-text">
+            <h1> Cryptonite
+                <!-- displays (image) the progress bar when the screen of "currencies" loads: -->
+                <img id="loadingBar" src="assets/images/spiner.jpg">
+            </h1>
+        </div>
+    </div>
+
+    <br>
+    <!-- displays 2 buttons("currencies" and "about") to navigate in the site: -->
+    <a href="#" class="divHeader btn btn-primary" id="currenciesButton"> Currencies </a>
+    <a href="#" class="divHeader btn btn-primary" id="about"> About </a>
+
+    <!-- displays input box for searching for a currency: -->
+    <div class="searchCoin">
+        <input class="inputSearchCoin" type="text" placeholder="Search coin" name="search">
+        <!-- button for searching currency: -->
+        <button class="buttonSearchCoin" id="searchButton" type="submit"><i>Search</i></button>
+    </div>
+
+    <!-- page "about", when the user click on button "about" in navigate -->
+    <div id="aboutPage">f
+        <!-- personal information: -->
+        <div class="textField" id="aboutTextField">
+            <div id="personalInformation">
+                <p id="hello"> hello! </p>
+                <p class="detailsAbout"> my name is miri gotliv,</p>
+                <p class="detailsAbout"> I'm 21 years old</p>
+                <p class="detailsAbout"> and I live in Petah Tiqwa.</p>
+            </div>
+            <div>
+                <!-- description of this application: -->
+                <p class="projectDescription">In this app you can search for currencies
+                    and get information about them,
+                </p>
+                <p class="projectDescription">for example to see how much they are worth
+                    in euros in dollars and shekels.</p>
+            </div>
+            <div>
+                <!-- my picture in "about" page: -->
+                <img id="myPicture" src="assets/images/mypicture.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="containerFluid">
+
+        <!-- row of cards: -->
+        <div id="div_row" class="row">
+        </div>
+
+        <!-- closing a div of background fixed of coins: -->
+    </div>
+
+    <!-- Notice to user that the currency he was looking for was not found: -->
+    <div id="notFoundContainer">
+        <div id="notFound">Couldn't find any Cryptonite</div>
+    </div>
+
+    <!-- Create a modal when the user selects more than 5 coins: -->
+    <div class="modalContainer">
+        <div class="modal" id="modal">
+            <div class="modalMessage">
+                <div class="glyphicon glyphicon-remove btn btn-info" id="crossIcon"></div>
+                <div class="NoticeUser">
+                    You can't select more than 5 currencies.
+                </div>
+                <div class="modalQuestion">
+                    Do you want to cancel or delete one of the below currencies?
+                </div>
+                <button id="cancelButton">Cancel</button>
+                <div class="currencyToDelete" id="currencyToDelete">
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
